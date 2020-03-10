@@ -27,4 +27,3 @@ if __name__ == '__main__':
     ###########################################
     unittest.main()
     ###########################################
-    os.system('aws s3 cp ./test-reports/ s3://oclim-terraform-s3-bucket/test-reports/ --exclude "*" --include "*.xml" --recursive')
