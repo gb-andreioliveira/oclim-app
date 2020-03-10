@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import unittest
 import app
+import os
 
 class TestHello(unittest.TestCase):
 
@@ -25,4 +26,11 @@ class TestHello(unittest.TestCase):
         self.assertIn(bytearray(f"{name}", 'utf-8'), rv.data)
 
 if __name__ == '__main__':
+    ############# Add these lines #############
+    import xmlrunner
+    runner = xmlrunner.XMLTestRunner(output='test-reports')
+    unittest.main(testRunner=runner)
+    ###########################################
     unittest.main()
+    ###########################################
+    os.system('aws s3 cp ./test-reports/ s3://oclim-terraform-s3-bucket/test-reports/ --exclude "*" --include "*.xml" --recursive')
