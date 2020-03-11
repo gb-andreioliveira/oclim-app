@@ -22,7 +22,7 @@ class TestHello(unittest.TestCase):
 if __name__ == '__main__':
     ############# Add these lines #############
     import xmlrunner
-    runner = xmlrunner.XMLTestRunner(output='test-reports')
+    runner = xmlrunner.XMLTestRunner(output='~/app/test-reports/')
     unittest.main(testRunner=runner)
     ###########################################
     unittest.main()
