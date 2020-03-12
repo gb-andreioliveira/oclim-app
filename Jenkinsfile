@@ -3,4 +3,5 @@
 ciPython {
     appGit = "https://github.com/gb-andreioliveira/oclim-app.git"
     appName = "app_oclim"
+    bucketName = "oclim-terraform-main-bucket"
 }
